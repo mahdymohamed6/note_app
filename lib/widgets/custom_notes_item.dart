@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/models/note_model.dart';
-import 'package:intl/intl.dart';
 
 import '../views/edit_notes_view.dart';
 
@@ -42,7 +41,9 @@ final NoteModel note;
                 ),
               ),
               trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    note.delete();
+                  },
                   icon: const Icon(
 
                     Icons.delete,
